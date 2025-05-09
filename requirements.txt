@@ -1,0 +1,3 @@
+eclipse-zenoh==1.0.2
+git+https://github.com/liuzhiyuan562/zenoh-ros-type-python.git#egg=zenoh-ros-type
+lanelet2
