@@ -119,7 +119,7 @@ class PoseServer:
 
 
 if __name__ == '__main__':
-    conf = zenoh.Config.from_file('/home/zy/autoware_carla_launch/k8s/zenoh_autoware_fms/config.json5')
+    conf = zenoh.Config.from_file('config.json5')
     session = zenoh.open(conf)
     pose_server = PoseServer(session)
     pose_server.find_vehicles()
