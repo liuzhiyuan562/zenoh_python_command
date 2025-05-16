@@ -6,7 +6,8 @@ MAP_PATH="frontend/public/carla_map/Town01"
 python3 -m pip install --upgrade gdown
 
 # If map doesn't exist
-if [ ! -d $MAP_PATH ]; then
+# if [ ! -d $MAP_PATH ]; then
+if [ ! -f $MAP_PATH/lanelet2_map.osm ] || [ ! -f $MAP_PATH/pointcloud_map.pcd ]; then
     echo "Download map from Internet..."
     mkdir $MAP_PATH
     gdown --fuzzy -O $MAP_PATH/lanelet2_map.osm https://drive.google.com/file/d/1vm9SvalJe7Bc9sh_8jK-0cPulVAov5uD/view
